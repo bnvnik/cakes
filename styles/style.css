@@ -1,0 +1,87 @@
+/* Basic style */
+body {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 27px;
+  color: #2d2829;
+
+  width: 1368px;
+  margin: 0 auto;
+
+  background-color: #fbebea;
+}
+
+.wrapper-page {
+  padding: 0 74px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.link {
+  font-size: 13px;
+  line-height: 16px;
+  color: inherit;
+  text-decoration-line: none;
+}
+
+/* Header style */
+.header-main {
+  padding-top: 45px;
+  margin-bottom: 25px;
+}
+
+.header-main .link {
+  text-transform: uppercase;
+}
+
+.header-main .link-current {
+  color: #f50049;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-main .nav-items {
+  gap: 30px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.header-main .link {
+  display: block;
+  padding: 15px;
+}
+
+.header-main .link:not(.link-current):hover,
+.header-main .link:not(.link-current):focus {
+  opacity: 0.7;
+}
+
+.header-main .link:not(.link-current):active {
+  opacity: 0.3;
+}
+
+.link-phone {
+  font-weight: 700;
+}
+
+.header-main .link-phone {
+  margin-left: auto;
+  padding-right: 0;
+}
+
+
