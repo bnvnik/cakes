@@ -27,7 +27,7 @@ body {
     "main"
     "footer";
 
-  max-width: 1368px;
+  width: 1368px;
   margin: 0 auto;
 
   background-color: #fbebea;
@@ -179,7 +179,7 @@ body {
   grid-area: hero;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   min-height: 918px;
 }
 
@@ -189,6 +189,8 @@ body {
 }
 
 .hero-image {
+  width: 759px;
+
   background-image: url("../images/background-image-1.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -213,7 +215,11 @@ body {
 
 .hero .list-pros {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  grid-template-columns: 1fr 1.5fr;
+
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .list-pros span {
@@ -223,6 +229,8 @@ body {
 }
 
 .list-pros span::before {
+  align-self: flex-start;
+
   content: "";
   flex-shrink: 0;
 
