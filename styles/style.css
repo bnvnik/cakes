@@ -101,8 +101,14 @@ body {
   margin: 0;
 
   font-size: 40px;
-  font-weight: 700;
   line-height: 66px;
+}
+
+.title-small {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .description {
@@ -171,7 +177,8 @@ body {
   grid-template-columns: 74px 1fr 74px;
   grid-template-areas:
     ". hero hero"
-    ". works .";
+    ". works ."
+    ". reviews .";
 }
 
 /* Hero section style */
@@ -185,7 +192,7 @@ body {
 
 .hero-content {
   width: 535px;
-  padding-top: 130px;
+  padding: 130px 0;
 }
 
 .hero-image {
@@ -254,10 +261,148 @@ body {
 /* Works style */
 .works {
   grid-area: works;
+
+  margin-top: -53px;
+  margin-bottom: 100px;
 }
 
 .works .title-middle {
+  max-width: 750px;
   margin-bottom: 55px;
+}
+
+.list-cards {
+  display: grid;
+  grid-template-columns: 696px 484px;
+  gap: 43px 38px;
+}
+
+.list-cards .card {
+  position: relative;
+  display: flex;
+  min-height: 305px;
+  background-color: #ffffff;
+}
+
+.list-cards .card:nth-child(3n-2) {
+  min-height: 653px;
+  grid-row: span 2;
+}
+
+.list-cards .card:nth-last-child(2) {
+  grid-row: span 1;
+}
+
+.list-cards .card:nth-child(3n-2):last-child {
+  max-height: 653px;
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.list-cards .card:only-child {
+  max-height: 653px;
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.card .wrapper-text {
+  position: absolute;
+  top: 30px;
+  left: 35px;
+}
+
+.card img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.list-cards .link {
+  position: absolute;
+  bottom: 35px;
+  right: 40px;
+
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 15px;
+
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.list-cards .link::after {
+  flex-shrink: 0;
+
+  content: "";
+
+  width: 17px;
+  height: 12px;
+
+  background-color: #1e201d;
+  mask-image: url("../images/icon-arrow.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+/* Reviews style */
+.reviews {
+  grid-area: reviews;
+
+  margin-bottom: 115px;
+}
+
+.reviews .title-middle {
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+
+.list-reviews {
+  display: grid;
+  gap: 50px;
+  justify-items: center;
+}
+
+.list-reviews li {
+  display: grid;
+  gap: 65px;
+  grid-template-columns: 210px 445px;
+}
+
+.list-reviews img {
+  width: 100%;
+  height: auto;
+  padding-top: 8px;
+
+  border-radius: 50%;
+
+}
+
+.list-reviews .wrapper-text {
+  grid-column: 2 / 3;
+}
+
+.list-reviews .title-small {
+  font-size: 27px;
+  line-height: 36px;
+}
+
+.biography {
+  display: block;
+
+  font-size: 25px;
+  line-height: 33px;
+}
+
+.list-reviews .biography {
+  margin-bottom: 19px;
+}
+
+.review-text {
+  margin: 0;
 }
 
 /* Footer style */
