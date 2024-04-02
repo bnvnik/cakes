@@ -118,6 +118,17 @@ body {
   line-height: 53px;
 }
 
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-bg {
+  width: 100%;
+  height: auto;
+}
+
 /* Header style */
 .header-main {
   grid-area: header;
@@ -178,7 +189,8 @@ body {
   grid-template-areas:
     ". hero hero"
     ". works ."
-    ". reviews .";
+    ". reviews ."
+    "advantages advantages .";
 }
 
 /* Hero section style */
@@ -187,7 +199,6 @@ body {
 
   display: grid;
   grid-template-columns: 1fr auto;
-  min-height: 918px;
 }
 
 .hero-content {
@@ -195,13 +206,9 @@ body {
   padding: 130px 0;
 }
 
-.hero-image {
+.hero .image-container {
   width: 759px;
-
-  background-image: url("../images/background-image-1.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top right;
+  min-height: 918px;
 }
 
 
@@ -250,11 +257,11 @@ body {
   background-color: #f50049;
 }
 
-.ingredients::before {
+.list-pros .ingredients::before {
   mask-image: url("../images/icon-list.svg");
 }
 
-.delivery::before {
+.list-pros .delivery::before {
   mask-image: url("../images/icon-box.svg");
 }
 
@@ -405,6 +412,82 @@ body {
   margin: 0;
 }
 
+/* Advantages style */
+.advantages {
+  grid-area: advantages;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.advantages .title-middle {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 74px;
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
+.advantages .description {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 520px;
+  margin-bottom: 115px;
+
+  font-size: 30px;
+  font-style: italic;
+  line-height: 40px;
+}
+
+.advantages .image-container {
+  width: 556px;
+  min-height: 622px;
+  margin-top: -201px;
+  margin-right: 66px;
+}
+
+.list-advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 670px;
+
+}
+
+.list-advantages .item-list {
+  display: flex;
+  gap: 20px;
+}
+
+.list-advantages .item-list::before {
+  width: 55px;
+  height: 55px;
+  padding-top: 15px;
+  flex-shrink: 0;
+
+  content: "";
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center bottom;
+}
+
+.list-advantages .item-list-ingredients::before {
+  background-color: #f50049;
+  mask-image: url("../images/icon-list.svg");
+}
+
+.list-advantages h3 {
+  margin: 0px;
+  margin-bottom: 15px;
+
+  font-size: 20px;
+}
+
+.list-advantages p {
+  margin: 0px;
+}
 /* Footer style */
 .footer-main {
   grid-area: footer;
